@@ -1,0 +1,241 @@
+/****************************
+  * Mobile View *
+  ****************************/
+@font-face {
+  font-family: pizza-shop-font;
+  src: url('../fonts/CormorantGaramond-VariableFont_wght.woff2') format('truetype');
+}
+
+* {
+  font-family: pizza-shop-font;
+  box-sizing: border-box; /* Forces padding to be calculated inside the 100% width */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #3e0400;
+}
+
+h1 {
+  color: #f5eedc;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+  margin: inherit;
+}
+
+h3 {
+  color: #ffffff;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+p {
+  color: #ffffff;
+  text-align: center;
+}
+
+label {
+  color: #ffffff;
+  text-align: center;
+}
+
+footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.navigation-bar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 1.5rem; /* Clean spacing between links */
+  background-color: #3e0400;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-link {
+  display: block; 
+  padding: 1.5rem 2rem;
+  color: #f5eedc; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hero-video {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;    /* Crop the video to fit the banner dimensions without squishing */
+}
+
+.article-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Clean spacing between columns */
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.article-item {
+  padding: 1rem;
+}
+
+.article-item img {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+}
+
+.warenkorb {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/****************************
+  * Tablet View *
+  ****************************/
+@media (min-width: 48rem) {
+  .article-box {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .article-item {
+    flex: 1 1 calc(50% - 1rem);
+    /*
+    Flex-grow (1): The item can expand to fill leftover space.
+    Flex-shrink (1): The item can shrink if space gets tight, preventing it from clipping off the screen.
+    Flex-basis (calc(50% - 1rem)): The item's ideal starting size before growing or shrinking begins. */
+  }
+}
+
+/****************************
+  * Desktop View *
+  ****************************/
+@media (min-width: 64rem) {
+  .article-item {
+    flex: 1 1 0%;
+  }
+}
+
+/****************************
+  * Error Message *
+  ****************************/
+.error-msg {
+  background-color: #7a1010;
+  color: #f5eedc;
+  border: 1px solid #c0392b;
+  border-radius: 4px;
+  padding: 0.75rem 1.25rem;
+  max-width: 28rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+/****************************
+  * Form & Button Styles *
+  ****************************/
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  max-width: 28rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #c0a070;
+  border-radius: 4px;
+  background-color: #5a0800;
+  color: #f5eedc;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.5rem 1.25rem;
+  margin: 0.25rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #c0392b;
+  color: #f5eedc;
+  transition: background-color 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #96281b;
+}
+
+/* Order button disabled state – required by Termin 4 checklist */
+#order-btn:disabled,
+button.btn-disabled {
+  background-color: #888;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/****************************
+  * Baker / Driver Tables *
+  ****************************/
+.status-table {
+  width: 100%;
+  max-width: 50rem;
+  margin: 1.5rem auto;
+  border-collapse: collapse;
+  color: #f5eedc;
+}
+
+.status-table th,
+.status-table td {
+  padding: 0.6rem 1rem;
+  border: 1px solid #c0a070;
+  text-align: center;
+}
+
+.status-table th {
+  background-color: #5a0800;
+  font-weight: bold;
+}
+
+.status-table tr:nth-child(even) {
+  background-color: rgba(255,255,255,0.05);
+}
+
+.status-table input[type="radio"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  cursor: pointer;
+}
+
+/****************************
+  * Customer Status Table *
+  ****************************/
+#order table {
+  width: 100%;
+  max-width: 32rem;
+  margin: 1rem auto;
+  border-collapse: collapse;
+  color: #f5eedc;
+}
+
+#order th,
+#order td {
+  padding: 0.5rem 1rem;
+  border: 1px solid #c0a070;
+  text-align: center;
+}
+
+#order th {
+  background-color: #5a0800;
+}

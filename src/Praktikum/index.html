@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Shop</title>
+    <link rel="icon" type="image/jpg"
+        href="https://imgs.search.brave.com/v68nDHw1HEtpiwkQ1EhkMqMVzGmT_POyyRaeDM37TZI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL3ByZW1p/dW0vcG5nLTI1Ni10/aHVtYi9waXp6YS1p/Y29uLXN2Zy1kb3du/bG9hZC1wbmctMjM0/Njc3OC5wbmc_Zj13/ZWJwJnc9MjU2">
+</head>
+
+<body>
+    <main>
+        <h1>Bestellung</h1>
+        <section>
+            <h2>Speisekarte</h2>
+            <article>
+                <h3>Pizza Salami - 8,50€</h3>
+                <img src="https://imgs.search.brave.com/n7nQf57AYxiPCNV_fqwnyNcye3A_RFUxJdeOOXJ5V9M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1Lzk2LzkwLzc2/LzM2MF9GXzU5Njkw/NzY1Ml9SRUZudWNE/WGhTTml6bXduVFc1/SndnYzkycnd3VXRn/Sy5qcGc"
+                    alt="Pizza Salami">
+            </article>
+            <article>
+                <h3>Pizza vegetarisch - 7,50€</h3>
+                <img src="https://imgs.search.brave.com/ovzOIXSurD2c2n_kznMYhHfpasyDZjPNdQXIWZAwKuk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXQuY29t/L3cvZnVsbC9hL2Qv/OS83ODAwMC0xOTIw/eDEwODAtZGVza3Rv/cC0xMDgwcC1waXp6/YS1iYWNrZ3JvdW5k/LWltYWdlLmpwZw"
+                    alt="Pizza vegetarisch">
+            </article>
+            <article>
+                <h3>Pizza Prosciutto - 9,50€</h3>
+                <img src="https://imgs.search.brave.com/RwmVyNwGMe-mkpUH-QfZZQnFtE5CyXZHJY52YFwN1Bw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTIv/NjAwLzkxMi9zbWFs/bC9kZWxpY2lvdXMt/cGl6emEtY292ZXJl/ZC13aXRoLWJhY29u/LXN0cmlwcy1mcmVz/aC1mcm9tLXRoZS1v/dmVuLXBob3RvLmpw/Zw"
+                    alt="Pizza Prosciutto">
+            </article>
+        </section>
+        <section>
+            <h2>Warenkorb</h2>
+            <form action="https://echo.hofmann-thomas.de" method="POST">
+                <div>
+                    <label for="user-address">Lieferadresse:</label><br>
+                    <input type="text" name="user-address" id="user-address" placeholder="Adresse eingeben" required>
+                </div>
+                <br>
+                <div>
+                    <label for="selected-pizzas">Pizza auswählen:</label><br>
+                    <select name="selected-pizzas[]" id="selected-pizzas" multiple required>
+                        <option value="salami">Pizza Salami</option>
+                        <option value="vegetarisch">Pizza vegetarisch</option>
+                        <option value="prosciutto">Pizza Prosciutto</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <p>
+                        Gesamtpreis: 17,00€
+                    </p>
+                </div>
+                <br>
+                <div>
+                    <button type="reset">Auswahl löschen</button>
+                    <button type="reset">Alles löschen</button>
+                    <button type="submit">Bestellen</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
